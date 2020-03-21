@@ -89,16 +89,7 @@ function validarSesion()
         if(parseInt(eCodUsuario)<1)
             { window.location="login.html"; }
         var eCodPromotoria = localStorage.getItem("codigopromotoria");
-        if(!localStorage.getItem("codigopromotoria"))
-            { 
-                alert("Sin promotorias para el dia de hoy!"); window.location="login.html"; 
-            }
-    }   
-    else
-        {
-            window.location="login.html"; 
-        }
-    if(localStorage.getItem("codigopromotoria")>0)
+        if(localStorage.getItem("codigopromotoria")>0)
         {
             
         }
@@ -106,6 +97,12 @@ function validarSesion()
         {
             alert("Sin promotorias para el dia de hoy!"); window.location="login.html"; 
         }
+    }   
+    else
+        {
+            window.location="login.html"; 
+        }
+    
 }
 
 function cargarObjetos()
