@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edar">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>FussionMD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="msapplication-tap-highlight" content="no">
+<link href="./main.css" rel="stylesheet">
+<script type="text/javascript" src="./assets/scripts/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.serializejson.js"></script>  
+<script src="js/bootstrap.min.js"></script>  
+<script type="text/javascript" src="aplicacion.js"></script>
+
+</head>
+<body>
+   <center>
+    
+                                 
+                           <div class="col-md-4 main-card mb-3 card" style="margin-top:15%;">
+                            <div class="card-body">
+                                <h5 class="card-title">Acceso al Sistema</h5>
+                                <form id="datos" name="datos">
+                                   <input type="hidden" id="accion" name="accion" value="inse-reg">
+                                    <div class="form-row">
+                                        <div class="col-md-12 mb-3">
+                                            <label for="correo">Usuario</label>
+                                            <input type="email" class="form-control" id="correo" placeholder="correo@ejemplo.com" required name="correo">
+                                            <div class="invalid-feedback">
+                                                    Ingresa tu usuario.
+                                                </div>
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <label for="password">Password</label>
+                                            <input type="password" class="form-control" id="password" placeholder="Password" required name="password">
+                                            <div class="invalid-feedback">
+                                                    Ingresa la contrase&ntilde;a.
+                                                </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <input type="button" class="btn btn-primary" onclick="iniciarSesion();" value="Acceder">
+                                </form>
+                            </div>
+                        </div>
+                        
+                 
+      
+     </center>   
+      <!-- Modal -->
+  <div class="modal fade" id="resError" role="dialog">
+    <div class="modal-dialog" id="divErrores">
+    
+      <!-- Modal content-->
+      <!--<div class="modal-content">
+        <div class="modal-body">
+          <center>
+            <img src="/res/error.png" style="width:75px; height:75px;"><br>
+              <h3>Error al procesar la solicitud</h3><br>
+            </center>
+            <div id="divErrores" name="divErrores"></div>
+        </div>
+      </div>-->
+        <div class="alert alert-danger">
+            <strong>Error!</strong> Favor de validar la siguiente informaci&oacute;n
+        </div>
+      
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="resProcess" role="dialog">
+    <div class="modal-dialog">
+        <div class="alert alert-info">
+            <strong>Procesando!</strong> Espera un momento por favor
+        </div>
+      
+    </div>
+  </div>
+</body>
+</html>
