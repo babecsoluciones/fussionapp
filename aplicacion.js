@@ -294,7 +294,7 @@ function agregarFilaArchivo(indice)
     var table = document.getElementById("imagenes");
     var row = table.insertRow(x);
     row.id="img"+(indice);
-    row.innerHTML = '<label for="tArchivo'+indice+'" class="form-control btn btn-info"><i class="fas fa-camera"></i> Tomar/subir Foto</label><input type="file" id="tArchivo'+indice+'" onchange="guardarImagen(\''+indice+'\')" accept="image/*" capture="camera"><input type="hidden" id="imgArchivo'+indice+'" name="fotos['+indice+'][tArchivo]">';
+    row.innerHTML = '<label for="tArchivo'+indice+'" class="form-control btn btn-info"><i class="fas fa-camera"></i> Tomar/subir Foto</label><input type="file" id="tArchivo'+indice+'" onchange="guardarImagen(\''+indice+'\')" accept="image/*;capture=camera" capture="camera"><input type="hidden" id="imgArchivo'+indice+'" name="fotos['+indice+'][tArchivo]">';
         }
         
     }
